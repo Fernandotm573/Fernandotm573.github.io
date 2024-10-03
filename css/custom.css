@@ -97,6 +97,17 @@ ul {
     border:none;
 }
 
+a.button {
+    background-color: #1EAEDB; /* Cambia el color de fondo del botón a azul */
+    color: white; /* Cambia el color del texto a blanco */
+    padding: 0px 20px; /* Añade un poco de relleno para que parezca un botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 8px; /* Añade bordes redondeados */
+    display: inline-block; /* Asegura que el enlace se comporte como un botón */
+}
+
+
+
 
 .barra {
     padding: 20px 0;
