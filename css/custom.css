@@ -241,3 +241,16 @@ a.button {
 .social-link:hover {
     opacity: 0.7;
 }
+
+
+/*Multimedia*/
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-container video {
+    max-width: 30%;
+    height: auto;
+}
