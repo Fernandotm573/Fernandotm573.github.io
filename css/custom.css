@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1 rem = 10px, más fácil para cálculos */
 }
 
 body {
@@ -15,12 +15,13 @@ h2 {
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 1.6rem; /* Utilizar rem para escalabilidad */
     font-weight: 700;
 }
 
+/* Encabezado con media query */
 header {
-    padding: 20px 0 0 0;
+    padding: 20px 0;
     background: black;
     text-align: center;
 }
@@ -88,9 +89,8 @@ ul {
 }
 
 .contenido-hero p {
-    
     color: black;
-    font-size: 18px;
+    font-size: 1.8rem; /* Utilizar rem para escalabilidad */
 }
 
 .contenido-hero form {
@@ -121,29 +121,25 @@ ul {
 a.button {
     background-color: #1EAEDB;
     color: white;
-    padding: 10px 20px;
+    padding: 1rem 2rem; /* Usar rem para escalabilidad */
     text-decoration: none;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 13px;
+    font-size: 1.4rem; /* Ajuste fino para diferentes tamaños de pantalla */
 }
 
 .barra {
     padding: 20px 0;
-    background: #741d51;
-    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%);
-    background: -webkit-linear-gradient(left, #741d51 0%, #e44e52 100%);
     background: linear-gradient(to right, #741d51 0%, #e44e52 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#741d51', endColorstr='#e44e52', GradientType=1);
 }
 
 .barra p {
     margin: 0;
     color: white;
-    font-size: 18px;
+    font-size: 1.8rem; /* Usar rem para escalabilidad */
 }
 
 .icono {
@@ -175,6 +171,9 @@ a.button {
 
 #lista-cursos .row {
     margin-bottom: 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
 }
 
 .agregar-carrito {
@@ -185,11 +184,28 @@ a.button {
     text-align: center;
     border: 1px solid #e1e1e1;
     background: white;
+    flex: 1 1 calc(33.333% - 1rem); /* Ajusta el tamaño para 3 columnas */
+    margin: 0.5rem;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 750px) {
     .card {
-        text-align: left;
+        flex: 1 1 100%; /* Ajusta a una columna en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 550px) {
+    .card {
+        flex: 1 1 100%; /* Ajusta a una columna en pantallas muy pequeñas */
+    }
+}
+
+@media (max-width: 750px) {
+    h2 {
+        font-size: 2.5rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+    h4 {
+        font-size: 1.4rem;
     }
 }
 
@@ -204,13 +220,13 @@ a.button {
 
 .info-card .precio {
     text-decoration: line-through;
-    font-size: 18px;
+    font-size: 1.8rem; /* Usar rem para escalabilidad */
     margin-top: 10px;
 }
 
 .info-card .precio span {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 2.2rem; /* Usar rem para escalabilidad */
 }
 
 .footer {
@@ -230,11 +246,11 @@ a.button {
     align-items: center;
     text-decoration: none;
     color: #1EAEDB;
-    font-size: 24px;
+    font-size: 2.4rem; /* Usar rem para escalabilidad */
 }
 
 .social-link i {
-    font-size: 32px;
+    font-size: 3.2rem; /* Usar rem para escalabilidad */
     margin-right: 10px;
 }
 
@@ -242,15 +258,13 @@ a.button {
     opacity: 0.7;
 }
 
-
 /*Multimedia*/
-
 .video-container {
     margin-top: 20px;
     text-align: center;
 }
 
 .video-container video {
-    max-width: 30%;
+    max-width: 30%; /* Ajusta el video para que ocupe el 100% del contenedor */
     height: auto;
 }
