@@ -265,6 +265,6 @@ a.button {
 }
 
 .video-container video {
-    max-width: 30%; /* Ajusta el video para que ocupe el 100% del contenedor */
+    max-width: 100%; /* Ajusta el video para que ocupe el 100% del contenedor */
     height: auto;
 }
